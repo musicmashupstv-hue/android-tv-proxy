@@ -1,0 +1,19 @@
+name = "android-tv-proxy"
+main = "src/index.js"
+compatibility_date = "2025-01-09"
+
+[env.production]
+vars = { ALLOWED_DOMAINS = "*" }
+
+[env.staging]
+vars = { ALLOWED_DOMAIN = "example.com" }
+
+# Optional: Add routes if you have a custom domain
+# routes = [
+#   { pattern = "proxy.yourdomain.com/*", zone_name = "yourdomain.com" }
+# ]
+
+# Optional: Increase limits if needed
+# [limits]
+# cpu_ms = 50
+# subrequests = 50
